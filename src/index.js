@@ -7,7 +7,7 @@ document.querySelector("#app").innerHTML = `
   <textarea id="inputarea" rows="6">
 Happy
 Birthday &#127881;
-to
+To
 You! &#9992;
 </textarea>
   <br><button  id="inputbutton">Make some slides!</button>
