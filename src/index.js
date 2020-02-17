@@ -19,21 +19,21 @@ You! &#9992;
 document.querySelector("#inputbutton").addEventListener("click", pushbutton);
 
 function pushbutton() {
-  let textarray = "";
+  let text_array = "";
   //console.log("dirk");
   let inputvalue = document.querySelector("#inputarea").value;
   console.log(inputvalue);
   //document.querySelector("#hier").innerHTML =
   //  '<a href="slides.html">' + inputvalue + "</a>";
-  textarray = inputvalue.split(/\r?\n/);
-  console.log(textarray);
+  text_array = inputvalue.split(/\r?\n/);
+  console.log(text_array);
   document.querySelector("#app").innerHTML = "";
   document.querySelector("#app").style.display = "none";
 
-  console.log("piet" + textarray[1]);
-  //return textarray;
+  console.log("piet" + text_array[1]);
+  //return text_array;
 
-  console.log("oke" + textarray[1]);
+  console.log("oke" + text_array[1]);
   document.querySelector("#slides").style.display = "flex";
   //hoi
   //`;
@@ -42,8 +42,8 @@ function pushbutton() {
   somewhere.addEventListener("click", myfunction);
 
   function myfunction() {
-    console.log("hoi" + textarray[1]);
-    document.querySelector("#slides").innerHTML = textarray[step];
+    console.log("hoi" + text_array[1]);
+    document.querySelector("#slides").innerHTML = text_array[step];
     document.body.style.backgroundColor = getRandomColor();
     step += 1;
 
