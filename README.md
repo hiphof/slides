@@ -2,5 +2,5 @@
 
 ### With colourful background
 
-- simple
+- interactive greeting card
 - mobile friendly

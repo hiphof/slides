@@ -1,7 +1,7 @@
 import "./styles.css";
 
 document.querySelector("#app").innerHTML = `
-<h1>&#127873; Make some greeting slides!</h1>
+<h1>&#127873; Make some greeting slides! <a href="https://github.com/hiphof/slides">source</a></h1>
 <div>
 <form>
   <textarea id="inputarea" rows="6">
