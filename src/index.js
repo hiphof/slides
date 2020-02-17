@@ -1,10 +1,11 @@
 import "./styles.css";
 
 document.querySelector("#app").innerHTML = `
-<h1>Your colourful slides!</h1>
+<h1>&#127873; Make some greeting slides!</h1>
 <div>
 <form>
   <textarea id="inputarea" rows="6">
+&#127856;
 Happy
 Birthday &#127881;
 To
