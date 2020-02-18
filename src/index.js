@@ -9,7 +9,7 @@ You! &#9992;`;
 
 document.querySelector("#app").innerHTML =
   `
-<h1>&#127873; Make some greeting slides! <a href="https://github.com/hiphof/slides">source</a></h1>
+<h1>&#127873; Make some greeting slides! </h1>
 <div>
 <form>
   <textarea id="inputarea" rows="6">` +
@@ -25,21 +25,21 @@ document.querySelector("#inputbutton").addEventListener("click", pushButton);
 function pushButton() {
   let content_array = "";
 
-  let input_value = document.querySelector("#inputarea").value;
+  let textarea_input = document.querySelector("#inputarea").value;
 
-  content_array = input_value.split(/\r?\n/);
+  content_array = textarea_input.split(/\r?\n/);
 
   document.querySelector("#app").innerHTML = "";
   document.querySelector("#app").style.display = "none";
 
-  // Start slides part
+  // START slides part
   document.querySelector("#slides").style.display = "flex";
 
   let step = 0;
-  let somewhere = document.querySelector("#slides");
-  somewhere.addEventListener("click", clickedSomewhere);
+  let slides_div = document.querySelector("#slides");
+  slides_div.addEventListener("click", clickedSlide);
 
-  function clickedSomewhere() {
+  function clickedSlide() {
     document.querySelector("#slides").innerHTML = content_array[step];
     document.body.style.backgroundColor = getRandomColor();
     step += 1;
@@ -53,3 +53,6 @@ function pushButton() {
     return color;
   }
 }
+
+document.querySelector("footer").innerHTML =
+  'Made with &#9829; in Leipzig by <a href="https://github.com/hiphof">hiphof</a></strong>';
