@@ -9,4 +9,3 @@
 
 - Make height textarea dynamic
 - seperate the generated slides to a different URL
-- stop clicks after last slide
