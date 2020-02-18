@@ -28,6 +28,8 @@ function pushButton() {
   let textarea_input = document.querySelector("#inputarea").value;
 
   content_array = textarea_input.split(/\r?\n/);
+  let number_of_slides = content_array.length;
+  console.log(number_of_slides);
 
   document.querySelector("#app").innerHTML = "";
   document.querySelector("#app").style.display = "none";
@@ -40,9 +42,11 @@ function pushButton() {
   slides_div.addEventListener("click", clickedSlide);
 
   function clickedSlide() {
-    document.querySelector("#slides").innerHTML = content_array[step];
-    document.body.style.backgroundColor = getRandomColor();
-    step += 1;
+    if (step < number_of_slides) {
+      document.querySelector("#slides").innerHTML = content_array[step];
+      document.body.style.backgroundColor = getRandomColor();
+      step += 1;
+    }
   }
   function getRandomColor() {
     var letters = "0123456789ABCDEF";
