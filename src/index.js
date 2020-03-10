@@ -1,24 +1,12 @@
 import "./styles.css";
 
-const initial_content = `
-&#127856;
+const initial_content = `&#127856;
 Happy
 Birthday &#127881;
 To
 You! &#9992;`;
 
-document.querySelector("#app").innerHTML =
-  `
-<h1>&#127873; Make some greeting slides! </h1>
-<div>
-<form>
-  <textarea id="inputarea" rows="6">` +
-  initial_content +
-  `</textarea>
-  <br><button  id="inputbutton">Make some slides!</button>
-  </div>
-  </form>
-`;
+document.querySelector("#inputarea").innerHTML = initial_content;
 
 document.querySelector("#inputbutton").addEventListener("click", pushButton);
 
@@ -57,6 +45,3 @@ function pushButton() {
     return color;
   }
 }
-
-document.querySelector("footer").innerHTML =
-  'Made with &#9829; in Leipzig by <a href="https://github.com/hiphof">hiphof</a></strong>';
