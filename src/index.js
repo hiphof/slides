@@ -1,20 +1,39 @@
 import "./styles.css";
 
-const initial_content = `&#127856;
+const queryString = window.location.search;
+var searchParams = new URLSearchParams(queryString);
+document.querySelector("#name").innerHTML = searchParams.get("m");
+
+if (searchParams.get("m") == null) {
+  console.log("is null");
+  createSlides();
+} else {
+  console.log(searchParams.get("m"));
+  displaySlides("henk");
+}
+
+function createSlides() {
+  const initial_content = `&#127856;
 Happy
 Birthday &#127881;
 To
 You! &#9992;`;
 
-document.querySelector("#inputarea").innerHTML = initial_content;
+  document.querySelector("#inputarea").innerHTML = initial_content;
 
-document.querySelector("#inputbutton").addEventListener("click", pushButton);
+  document.querySelector("#inputbutton").addEventListener("click", pushButton);
+}
 
 function pushButton() {
-  let content_array = "";
-
   let textarea_input = document.querySelector("#inputarea").value;
+  //const content_encoded = encodeURI(initial_content);
+  //console.log(content_encoded);
+  //document.querySelector("#sendurl").innerHTML = content_encoded;
+  displaySlides(textarea_input);
+}
 
+function displaySlides(textarea_input) {
+  let content_array = "";
   content_array = textarea_input.split(/\r?\n/);
   let number_of_slides = content_array.length;
   console.log(number_of_slides);
