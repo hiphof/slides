@@ -1,5 +1,11 @@
 import "./styles.css";
 
+const initial_content = `&#127856;
+Happy
+Birthday &#127881;
+To
+You! &#9992;`;
+
 const queryString = window.location.search;
 var searchParams = new URLSearchParams(queryString);
 document.querySelector("#name").innerHTML = searchParams.get("m");
@@ -9,16 +15,10 @@ if (searchParams.get("m") == null) {
   createSlides();
 } else {
   console.log(searchParams.get("m"));
-  displaySlides("henk");
+  displaySlides(searchParams.get("m"));
 }
 
 function createSlides() {
-  const initial_content = `&#127856;
-Happy
-Birthday &#127881;
-To
-You! &#9992;`;
-
   document.querySelector("#inputarea").innerHTML = initial_content;
 
   document.querySelector("#inputbutton").addEventListener("click", pushButton);
