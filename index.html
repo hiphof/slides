@@ -10,14 +10,22 @@
       <h1>&#127873; Make some greeting slides! </h1>
       <div>
         <div id="name"></div>
-      <form>
         <textarea id="inputarea" rows="6"></textarea>
-        <br><button  id="inputbutton">Make some slides!</button>
-      </form>
+        <br><button id="inputbutton">Generate a link to send!</button>
+        <div id="sendurl">
+          <!-- Target -->
+          <input id="foo" value="test">
+          
+          <!-- Trigger -->
+          <button class="btn" data-clipboard-target="#foo">
+              copy
+          </button></div>
       </div>
     </div>
-      <div id="sendurl"><div>
+      
+
     <div id="slides">CLICK!</div>
+
     <footer>Made by <a href="https://github.com/hiphof">hiphof</a></strong></footer>
 
     <script src="src/index.js"></script>
