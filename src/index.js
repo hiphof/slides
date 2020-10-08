@@ -1,6 +1,6 @@
 import "./styles.css";
 import { Base64 } from "js-base64";
-import * as ClipboardJS from "clipboard";
+//import * as ClipboardJS from "clipboard";
 
 //new ClipboardJS('.btn');
 
