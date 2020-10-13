@@ -1,8 +1,5 @@
 import "./styles.css";
 import { Base64 } from "js-base64";
-//import * as ClipboardJS from "clipboard";
-
-//new ClipboardJS('.btn');
 
 const initial_content = `&#127856;
 Happy
@@ -15,10 +12,10 @@ var searchParams = new URLSearchParams(queryString);
 document.querySelector("#name").innerHTML = searchParams.get("m");
 
 if (searchParams.get("m") == null) {
-  console.log("is null");
+  //console.log("is null");
   createSlides();
 } else {
-  console.log(searchParams.get("m"));
+  //console.log(searchParams.get("m"));
   displaySlides(searchParams.get("m"));
 }
 
