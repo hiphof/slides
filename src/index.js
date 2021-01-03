@@ -77,6 +77,7 @@ function displaySlides(encoded_message_get) {
   }
   function getRandomColor() {
     var letters = "456789ABCDEF"; //skipped 123 to make colors more light
+
     var color = "#";
     for (var i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * letters.length)];
